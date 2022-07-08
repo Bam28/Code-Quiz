@@ -3,8 +3,12 @@ const nextButton = document.querySelector('#next')
 const questionSectionElement = document.querySelector('#question-section')
 const questionElement = document.querySelector('.question')
 const answerButtonsElement = document.querySelector('#answer-buttons')
+const timeElement = document.querySelector('#time');
+const initialsElement = document.querySelector('#initials')
 
 let shuffledQuestions, currentQuestionIndex
+
+let timeLeft= 20;
 
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
@@ -13,11 +17,43 @@ nextButton.addEventListener('click', () => {
 })
 
 function startGame() {
+  timing();
   startButton.classList.add('hide')
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
   questionSectionElement.classList.remove('hide')
   setNextQuestion()
+}
+
+function timing () {
+    var timeInterval = setInterval(function(){
+    timeLeft--;
+    timeElement.textContent = timeLeft;
+    if(timeLeft == 0) {
+      clearInterval(timeInterval);
+      sendMessage();
+      questionSectionElement.classList.add('hide');
+      showForm();
+    }
+  }, 1000);
+}
+
+function showForm () {
+  var input = document.createElement("input");
+  var input2 = document.createElement('input');
+  input2.type = 'button';
+  input2.textContent = 'Sumbit';
+  input.type = "text";
+  input.className = "css-class-name"; // set the CSS class
+  initialsElement.appendChild(input);
+  initialsElement.appendChild(input2);
+  initialsElement.classList.remove('hide') // put it into the DOM
+
+}
+
+function sendMessage() {
+  timeElement.textContent = "Ran out of time ";
+  //.classList.add('hide')
 }
 
 function setNextQuestion() {
@@ -33,6 +69,9 @@ function showQuestion(question) {
     button.classList.add('btn')
     if (answer.correct) {
       button.dataset.correct = answer.correct
+    } else {
+      timeLeft = timeLeft - 5;
+      timeElement.textContent = timeLeft;
     }
     button.addEventListener('click', selectAnswer)
     answerButtonsElement.appendChild(button)
