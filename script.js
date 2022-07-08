@@ -8,7 +8,7 @@ const initialsElement = document.querySelector('#initials')
 
 let shuffledQuestions, currentQuestionIndex
 
-let timeLeft= 20;
+let timeLeft= 120;
 
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
@@ -29,7 +29,7 @@ function timing () {
     var timeInterval = setInterval(function(){
     timeLeft--;
     timeElement.textContent = timeLeft;
-    if(timeLeft == 0) {
+    if(timeLeft === 0) {
       clearInterval(timeInterval);
       sendMessage();
       questionSectionElement.classList.add('hide');
@@ -53,7 +53,6 @@ function showForm () {
 
 function sendMessage() {
   timeElement.textContent = "Ran out of time ";
-  //.classList.add('hide')
 }
 
 function setNextQuestion() {

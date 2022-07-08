@@ -1,25 +1,8 @@
 # Code-Quiz
-
-# 04 Web APIs: Code Quiz
-
-## Your Task
-
-At some point in your journey to become a full-stack web developer, you’ll likely be asked to complete a coding assessment&mdash;perhaps as part of an interview process. A typical coding assessment includes both multiple-choice questions and interactive coding challenges. 
-
-To help familiarize you with these tests and allow you to use the skills covered in this module, this Challenge invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. 
-
-This week’s coursework will equip you with all the skills you need to succeed in this assignment.
-
-## User Story
-
 ```
 AS A coding boot camp student
 I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
 SO THAT I can gauge my progress compared to my peers
-```
-
-## Acceptance Criteria
-
 ```
 GIVEN I am taking a code quiz
 WHEN I click the start button
@@ -33,69 +16,9 @@ THEN the game is over
 WHEN the game is over
 THEN I can save my initials and my score
 ```
-
-## Mock-Up
-
-The following animation demonstrates the application functionality:
-
-![A user clicks through an interactive coding quiz, then enters initials to save the high score before resetting and starting over.](./Assets/04-web-apis-homework-demo.gif)
-
-## Grading Requirements
-
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
-
-This Challenge is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the preceding acceptance criteria.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the Challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
-
----
-
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+I started by doing the HTML file first then the CSS to get an idea of what to worked with.
+First idea that I had was to make an object and then from there call all the methods to make it look a little more "clean". Had (and have) struggles with how to start everything with JS. Looked through google to find ideas (https://www.youtube.com/watch?v=riDzcEQbX6k). I saw a little bit of what he did and one error or I don't actually if it was going to work was to do the questions on HTML but the video he did them at JS. Honestly I that point I was trying to do it at my own but couldn't do it. I didn't know how to start the process.
+Then at class with my team we did pseudo-code. It did helped me a lot and tried to implemented at my worked. It did gave me a better understandig. I Still struggled even that I tried to tink of a way. Decided at the end to watch the video.
+Follow throught the video it made it look simple. I understood everything he was writing. Still it helped a lot to understand that I need to find a way to come with the ideas or the structure to write what I need to make.
+```
+I did 10 functions. Still missing the local storage because I got to the part of being stucked with the button to decrease the time and after it runs to 0 it stopped instead of getting to negative numbers.
